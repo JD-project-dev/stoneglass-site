@@ -126,13 +126,8 @@ a:hover{color:var(--white)}
 .clip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s ease}
 /* main.js adds .dip just before a clip loops, so the cut back to the start fades through dark */
 .clip video.dip{opacity:0}
-/* still images in a card: four in a 2x2 grid (quad) or two side by side (pair) */
-.clip.pics{display:grid;gap:2px;background:var(--ink)}
-.clip.quad{grid-template:1fr 1fr/1fr 1fr}
-.clip.pair{grid-template-columns:2fr 3fr}
-.pics figure{position:relative;margin:0;min-width:0;min-height:0;overflow:hidden}
-.pics img{display:block;width:100%;height:100%;object-fit:cover}
-.pics figcaption{position:absolute;left:6px;bottom:6px;padding:3px 7px;border-radius:3px;background:rgba(7,11,24,.78);font:600 11px/1.2 var(--f-display);letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+/* a still image in a card fills the 16:9 box the same way a clip does */
+.clip img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .gallery{padding-block:0 clamp(40px,7vw,72px)}
 .gallery h2{margin:0 0 20px;font:700 clamp(28px,5.5vw,44px)/1 var(--f-display);letter-spacing:.05em;text-transform:uppercase}
 .gallery h2 span{color:var(--teal)}
