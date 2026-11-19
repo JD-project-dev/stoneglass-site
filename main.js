@@ -43,7 +43,15 @@
           } else if(!v.paused){ v.pause(); }
         });
       }, {threshold:0.25});
-      tiles.forEach(function(v){ seen.observe(v); });
+      tiles.forEach(function(v){
+        seen.observe(v);
+        /* The clips don't loop seamlessly: fade out over the last moment and back in after the jump to the start. */
+        v.addEventListener("timeupdate", function(){
+          var d = v.duration; if(!d) return;
+          if(v.currentTime > d - 0.6) v.classList.add("dip");
+          else if(v.currentTime < 0.4) v.classList.remove("dip");
+        });
+      });
     }
   }
 })();
