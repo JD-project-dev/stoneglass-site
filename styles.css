@@ -49,8 +49,8 @@ a:hover{color:var(--white)}
 }
 
 /* hero: no video. Wordmark over a drawn night skyline. */
-.hero{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(120% 90% at 82% 8%,rgba(0,229,192,.13),rgba(0,229,192,0) 58%),radial-gradient(70% 46% at 50% 100%,rgba(84,120,255,.20),rgba(84,120,255,0) 70%),radial-gradient(60% 50% at 6% 100%,rgba(255,210,31,.10),rgba(255,210,31,0) 62%),linear-gradient(#060914,#0B1020 80%);padding-block:clamp(44px,9vh,104px) clamp(150px,27vh,290px)}
-.hero::before{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:min(54%,400px);background:url(assets/img/skyline.svg) 50% 100%/auto 100% repeat-x}
+.hero{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(120% 90% at 82% 8%,rgba(0,229,192,.13),rgba(0,229,192,0) 58%),radial-gradient(70% 46% at 50% 100%,rgba(84,120,255,.20),rgba(84,120,255,0) 70%),radial-gradient(60% 50% at 6% 100%,rgba(255,210,31,.10),rgba(255,210,31,0) 62%),linear-gradient(#060914,#0B1020 80%);padding-block:clamp(44px,9vh,104px) clamp(84px,13vh,150px)}
+.hero::before{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:min(48%,300px);background:url(assets/img/skyline.svg) 50% 100%/auto 100% repeat-x}
 .hero::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(11,16,32,0),var(--ink))}
 .status{display:inline-flex;align-items:center;gap:10px;margin:0 0 clamp(18px,3.5vw,28px);padding:8px 14px 8px 12px;border:1px solid rgba(255,210,31,.5);border-radius:999px;background:rgba(11,16,32,.6);font:600 12px/1 var(--f-display);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 .status i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(255,210,31,.18)}
