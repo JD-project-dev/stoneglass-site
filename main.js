@@ -22,38 +22,7 @@
 
   var c = navigator.connection, saveData = !!(c && c.saveData);
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function addSources(v, list){ list.forEach(function(x){ var s = document.createElement("source"); s.src = x[0]; s.type = x[1]; v.appendChild(s); }); }
   function play(v){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
-
-  /* Sign-up: no email provider yet, so nothing is sent. */
-  var form = document.getElementById("signupForm");
-  if(form){
-    var msg = document.getElementById("signupMsg");
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
-      var v = form.email.value.trim();
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){ msg.textContent = "Enter an email address like you@email.com."; form.email.focus(); return; }
-      msg.textContent = "Sign-ups open soon. Check back!"; /* TODO: send to the email provider once it is set up */
-    });
-  }
-  var tb = document.getElementById("trailerBtn");
-  if(tb) tb.addEventListener("click", function(){ this.lastChild.textContent = "Trailer coming soon"; });
-
-  /* Hero: the street-run clip, or grapple-rooftop-01 if that file isn't there. Poster first, video after the page loads. */
-  var hv = document.getElementById("heroVid");
-  if(hv){
-    var V = "assets/video/";
-    var probe = new Image();
-    probe.onload = function(){ setHero("hero-street"); };
-    probe.onerror = function(){ setHero("grapple-rooftop-01"); };
-    probe.src = V + "hero-street-poster.jpg";
-    function setHero(n){
-      hv.poster = V + n + "-poster.jpg";
-      if(reduce || saveData) return;
-      function go(){ addSources(hv, [[V+n+".webm","video/webm"],[V+n+".mp4","video/mp4"]]); hv.load(); play(hv); }
-      if(document.readyState === "complete") go(); else window.addEventListener("load", go);
-    }
-  }
 
   /* Clip tiles: posters load only as a tile nears the screen; video only once it's on screen, paused when it leaves. */
   var tiles = document.querySelectorAll("video[data-lazy]");

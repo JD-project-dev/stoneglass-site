@@ -23,7 +23,6 @@
         <a href="index.html" data-nav="index.html">Crime Spree</a>
         <a href="support.html" data-nav="support.html">Support</a>
         <a href="about.html" data-nav="about.html">About</a>
-        <a class="cta" href="index.html#signup">Get updates</a>
       </nav>
       <div class="social" aria-label="Social"></div>
     </div>
@@ -31,33 +30,16 @@
 </header>
 
 <main>
-  <section class="hero" aria-label="Crime Spree">
-    <div class="frame">
-      <video id="heroVid" aria-hidden="true" muted loop playsinline preload="none"></video>
-      <div class="over band"><div class="in">
-        <h1 class="wordmark"><span class="w1">Crime</span> <span class="w2">Spree</span></h1>
-        <p class="tagline">Steal cars. Outgun your rivals. Run the city.</p>
-        <div class="btns">
-          <a class="btn primary" href="index.html#signup">Get launch updates</a>
-          <button class="btn ghost" type="button" id="trailerBtn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3l15 9-15 9z"/></svg>Watch the trailer</button>
-        </div>
-      </div></div>
-    </div>
-  </section>
-
-  <section class="soon band" id="signup" aria-labelledby="soonH">
-    <div class="in"><div class="card">
-      <div>
-        <h2 id="soonH">Coming soon to <em>Android</em></h2>
-        <p>An open-world shooter where four factions fight over one city, and you're about to take all of it. Sign up and we'll tell you the day it drops.</p>
+  <section class="hero band" aria-label="Crime Spree">
+    <div class="in">
+      <p class="status"><i></i>Coming soon to Android</p>
+      <h1 class="wordmark"><span class="w1">Crime</span> <span class="w2">Spree</span></h1>
+      <p class="tagline">Steal cars. Outgun your rivals. Run the city.</p>
+      <p class="pitch">An open-world shooter where four factions fight over one city, and you're about to take all of it.</p>
+      <div class="btns">
+        <a class="btn primary" href="#city">See what's in the city<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M12 4v15M5 12l7 7 7-7"/></svg></a>
       </div>
-      <form class="signup" id="signupForm" novalidate>
-        <label for="email">Get launch updates</label>
-        <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
-        <button class="btn primary" type="submit">Notify me</button>
-        <p class="msg" id="signupMsg" role="status"></p>
-      </form>
-    </div></div>
+    </div>
   </section>
 
   <section class="ctrl band" aria-label="Controllers and phones">
@@ -67,17 +49,17 @@
     </div>
   </section>
 
-  <section class="feats band" aria-labelledby="featH">
+  <section class="feats band" id="city" aria-labelledby="featH">
     <div class="in">
       <h2 id="featH">What's waiting <span>in the city</span></h2>
       <ul class="sell">
         <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/street-chaos-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/street-chaos-01.webm" type="video/webm"><source data-src="assets/video/street-chaos-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Four factions, one city</b>Take Red Kings, Blue Serpents, Gold Crowns and Silent Clan turf block by block.</div></li>
-        <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/boss-bull-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/boss-bull-01.webm" type="video/webm"><source data-src="assets/video/boss-bull-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Bosses that go big</b>A charging mechanical bull, a flying saucer that comes to collect your debts, and six more.</div></li>
         <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/hijack-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/hijack-01.webm" type="video/webm"><source data-src="assets/video/hijack-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Steal anything with wheels</b>Cars, bikes, trucks, even a yacht.</div></li>
         <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/tank-rampage-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/tank-rampage-01.webm" type="video/webm"><source data-src="assets/video/tank-rampage-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Call in a tank</b>When the block gets loud, get louder.</div></li>
         <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/robot-dog-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/robot-dog-01.webm" type="video/webm"><source data-src="assets/video/robot-dog-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Bring the robot dog</b>Kitted out with modules and loyal to the end.</div></li>
-        <li><b>Loot worth chasing</b>13 weapons up to a flamethrower and rocket launcher, five rarities, legendaries and skins.</li>
-        <li class="has-clip"><div class="clip"><video data-lazy muted loop playsinline preload="none" data-poster="assets/video/grapple-pull-enemy-01-poster.jpg" aria-hidden="true"><source data-src="assets/video/grapple-pull-enemy-01.webm" type="video/webm"><source data-src="assets/video/grapple-pull-enemy-01.mp4" type="video/mp4"></video></div><div class="txt"><b>Superpowered crime</b>Grapple, cloak, nova burst and a jetpack.</div></li>
+        <li><b>Bosses that go big</b>A charging mechanical bull, a flying saucer that comes to collect your debts, and six more.</li>
+        <li><b>Loot worth chasing</b>13 weapons up to a flamethrower and rocket launcher, five rarities and legendaries. Ten weapon skins, from Urban Camo to Neon Grid, repaint any gun you carry.</li>
+        <li><b>Superpowered crime</b>Grapple, cloak, nova burst and a jetpack.</li>
         <li><b>Look like a kingpin</b>A full character creator and a loft of your own.</li>
         <li><b>Hit the casino</b>Slots and blackjack, with free chips every day.</li>
         <li><b>Plays anywhere</b>Optimized for foldable and standard phones, plays offline, controller ready.</li>
